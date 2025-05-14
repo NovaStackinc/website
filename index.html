@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaStack.tech</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #1A73E8;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .hero {
+      padding: 80px 10%;
+      background: linear-gradient(135deg, #eaf3ff 0%, #ffffff 100%);
+      text-align: left;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .hero button {
+      background-color: #0074F0;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .hero button:hover {
+      background-color: #005bb5;
+    }
+    .section {
+      padding: 60px 10%;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0074F0;
+    }
+    .section p, .section ul {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .section ul li {
+      margin-bottom: 10px;
+    }
+    footer {
+      background: #f3f4f6;
+      text-align: center;
+      padding: 20px;
+      color: #757575;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin-top: 20px;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      background-color: #0074F0;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="NovaStack Logo">
+    <nav>
+      <a onclick="scrollToSection('home')">Home</a>
+      <a onclick="scrollToSection('about')">About</a>
+      <a onclick="scrollToSection('services')">What We Do</a>
+      <a onclick="scrollToSection('contact')">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Empowering Ideas. Building the Future.</h1>
+    <p>Smart solutions to bring your innovations to life. We provide the technology and expertise to help you succeed in a digital world.</p>
+    <button onclick="scrollToSection('contact')">Get Started</button>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About</h2>
+    <p>NovaStack Inc is a forward-thinking technology company headquartered in Delaware, USA. Founded with a mission to design, develop, and manage cutting-edge digital solutions, NovaStack serves as a dynamic launchpad for innovative mobile apps and web platforms tailored to modern global audiences.</p>
+    <h3>Vision</h3>
+    <p>To become a leading incubator of purposeful technology—transforming digital ideas into practical solutions that empower people and enhance everyday life.</p>
+    <h3>Why NovaStack</h3>
+    <ul>
+      <li>Founded in the USA, with global ambition</li>
+      <li>Agile team of tech innovators and creative minds</li>
+      <li>End-to-end ownership: design, development, deployment, and management</li>
+      <li>Commitment to excellence, privacy, and long-term scalability</li>
+    </ul>
+  </section>
+
+  <section class="section" id="services">
+    <h2>What We Do</h2>
+    <p>At NovaStack, we specialize in creating high-impact, user-centric applications that solve real-world problems. We’re currently building and managing three unique digital products across different domains—each designed to bring value, efficiency, and engagement to its target users. From concept to deployment, we oversee every stage of the development lifecycle to ensure quality, scalability, and seamless user experiences.</p>
+    <h3>Our Focus</h3>
+    <ul>
+      <li><strong>Digital Innovation</strong>: Leveraging the latest technologies to turn ideas into scalable products.</li>
+      <li><strong>Agile Product Development</strong>: Fast-paced, iterative design and development cycles.</li>
+      <li><strong>Human-Centered Design</strong>: Intuitive interfaces and meaningful user journeys.</li>
+      <li><strong>Cross-Platform Expertise</strong>: Web and mobile applications built to perform across ecosystems.</li>
+    </ul>
+    <h3>Our Projects</h3>
+    <p>NovaStack is currently spearheading three distinct projects, including consumer-facing mobile apps and B2B digital services. Each project is uniquely positioned to address gaps in its respective market, powered by data-driven design, clean code, and scalable infrastructure.</p>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>Contact us to discuss your project requirements:</p>
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! We will get in touch.');">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 NovaStack Inc. All rights reserved.
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
